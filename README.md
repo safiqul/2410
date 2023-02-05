@@ -4,7 +4,7 @@
 
 > python3 tcpserver.py
 
-2. run the client with:
+2. run the `client` with:
 
 > python3 tcpclient.py
 
