@@ -8,6 +8,7 @@ memory space with main thread.
 from socket import *
 import _thread as thread
 import time
+import sys 
 
 def now():
 	"""
@@ -38,8 +39,10 @@ def main():
 	serverSocket = socket(AF_INET,SOCK_STREAM)
 	try:
 		serverSocket.bind(('',serverPort))
+		
 	except: 
 		print("Bind failed. Error : ")
+		sys.exit()
 	serverSocket.listen(1)
 	print ('The server is ready to receive')
 	while True:
