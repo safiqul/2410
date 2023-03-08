@@ -22,11 +22,11 @@ class LinuxRouter( Node ):
 class NetworkTopo( Topo ):
 
     def build( self, **_opts ):		
-        r1=self.addHost("r1",ip=None)
+        h1=self.addHost("h1",ip=None)
         r2=self.addNode("r2",cls=LinuxRouter,ip=None)
-        r3=self.addHost("r3",ip=None)
-        self.addLink(r1,r2,params1={ 'ip' : '10.0.0.1/24' },params2={ 'ip' : '10.0.0.2/24' }, bw=10, delay='25ms')#,max_queue_size=834, use_htb=True)
-        self.addLink(r2,r3,params1={ 'ip' : '10.0.1.1/24' },params2={ 'ip' : '10.0.1.2/24' }, bw=10, delay='25ms')#, max_queue_size=834, use_htb=True)
+        h3=self.addHost("h3",ip=None)
+        self.addLink(h1,r2,params1={ 'ip' : '10.0.0.1/24' },params2={ 'ip' : '10.0.0.2/24' }, bw=10, delay='5ms')#,max_queue_size=834, use_htb=True)
+        self.addLink(r2,h3,params1={ 'ip' : '10.0.1.1/24' },params2={ 'ip' : '10.0.1.2/24' }, bw=10, delay='5ms', max_queue_size=17)#, max_queue_size=834, use_htb=True)
 
 topo = NetworkTopo()
 net = Mininet( topo=topo, link=TCLink )
@@ -34,10 +34,10 @@ net.start()
 
 #ip route add ipA via ipB dev INTERFACE
 #every packet going to ipA must first go to ipB using INTERFACE
-net["r1"].cmd("ip route add 10.0.1.2 via 10.0.0.2 dev r1-eth0")
-net["r3"].cmd("ip route add 10.0.0.1 via 10.0.1.1 dev r3-eth0")
+net["h1"].cmd("ip route add 10.0.1.2 via 10.0.0.2 dev r1-eth0")
+net["h3"].cmd("ip route add 10.0.0.1 via 10.0.1.1 dev r3-eth0")
 #this command is just to r3 ping r2 work, because it will use the correct ip
-net["r3"].cmd("ip route add 10.0.0.2 via 10.0.1.1 dev r3-eth0")
+net["h3"].cmd("ip route add 10.0.0.2 via 10.0.1.1 dev r3-eth0")
 net.pingAll()
 CLI( net )
 net.stop()
