@@ -34,10 +34,10 @@ net.start()
 
 #ip route add ipA via ipB dev INTERFACE
 #every packet going to ipA must first go to ipB using INTERFACE
-net["h1"].cmd("ip route add 10.0.1.2 via 10.0.0.2 dev r1-eth0")
-net["h3"].cmd("ip route add 10.0.0.1 via 10.0.1.1 dev r3-eth0")
+net["h1"].cmd("ip route add 10.0.1.2 via 10.0.0.2 dev h1-eth0")
+net["h3"].cmd("ip route add 10.0.0.1 via 10.0.1.1 dev h3-eth0")
 #this command is just to r3 ping r2 work, because it will use the correct ip
-net["h3"].cmd("ip route add 10.0.0.2 via 10.0.1.1 dev r3-eth0")
+net["h3"].cmd("ip route add 10.0.0.2 via 10.0.1.1 dev h3-eth0")
 net.pingAll()
 CLI( net )
 net.stop()
