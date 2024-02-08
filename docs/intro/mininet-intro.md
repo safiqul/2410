@@ -8,7 +8,7 @@ python scripts. You can run your own application code.
 From the official page: *Mininet's virtual hosts, switches, links, and controllers are the real thing – they are just created using software rather than hardware – and for the most part their behavior is similar to discrete hardware elements. It is usually possible to create a Mininet network that resembles a hardware network, or a hardware network that resembles a Mininet network, and to run the same binary code and applications on either platform.* 
 
 
-In this lab, we'll learn how to use Mininet. 
+In this tutorial, we'll learn how to use Mininet. 
 
 * [Part 1: Installing Mininet](#part-1-installing-mininet)
 * [Part 2: Running Mininet](#part-2-running-mininet)
@@ -17,10 +17,10 @@ In this lab, we'll learn how to use Mininet.
 
 ## Learning outcomes
 
-After completing this exercise, you will:
+After completing this tutorial, you will:
 
 * learn the basic usage of Mininet
-* measure the performance (end-to-end throughput and latency (**see my performance evaluation slides**)) of your virtual networks
+* learn to measure the performance (end-to-end throughput and latency of your virtual networks
 
 
 ## Part 1: Installing Mininet
