@@ -17,10 +17,9 @@ In this lab, we'll learn how to use Mininet.
 
 ## Learning outcomes
 
-After completing this lab, students will:
+After completing this exercise, you will:
 
 * learn the basic usage of Mininet
-* play with default Mininet topology
 * measure the performance (end-to-end throughput and latency (**see my performance evaluation slides**)) of your virtual networks
 
 
