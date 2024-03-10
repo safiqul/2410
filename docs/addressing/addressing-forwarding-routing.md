@@ -2,7 +2,7 @@
 
 ## Overview
 
-So far you have learned how to create your own network with a few lines of python codes in `mininet`. In this lab, you will learn how to add IP addresses to network interfaces, enable IP fowarding in a machine to make it a router, and manually configure network routes (static routing) to allow nodes to communicate with each other. 
+So far you have learned how to create your own network with a few lines of python codes in `mininet`. In this lab, you will learn how to add IP addresses to network interfaces, enable IP forwarding in a machine to make it a router, and manually configure network routes (static routing) to allow nodes to communicate with each other. 
 
 **NOTE** we'll still use mininet but *only* for creating *nodes*.
 
