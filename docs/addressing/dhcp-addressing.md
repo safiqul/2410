@@ -122,16 +122,17 @@ Add the following lines in your `dhcpd.conf` file to specify the range for the I
 
 ```sh
 subnet 192.168.1.0 netmask 255.255.255.0 {
-        range 192.168.1.2 192.168.1.254;
-        option broadcast-address 192.168.1.255;
-        option routers 192.168.1.1;
-        INTERFACES = "r-eth0";
+    range 192.168.1.2 192.168.1.254;
+    option broadcast-address 192.168.1.255;
+    option routers 192.168.1.1;
+    INTERFACES = "r-eth0";
 }
 subnet 192.168.2.0 netmask 255.255.255.0 {
-        range 192.168.2.2 192.168.2.254;
-        option broadcast-address 192.168.2.255;
-        option routers 192.168.2.1;
-        INTERFACES = "r-eth1";
+    range 192.168.2.2 192.168.2.254;
+    option broadcast-address 192.168.2.255;
+    option routers 192.168.2.1;
+    INTERFACES = "r-eth1";
+}
 ```
 
 ### Start DHCP server
