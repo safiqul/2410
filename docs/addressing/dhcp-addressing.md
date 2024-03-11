@@ -159,7 +159,7 @@ Start wireshark from h1's terminal and capture packets on `h1-eth0`:
 
 ```console
 h1$ wireshark &
-```console
+```
 
 and then run `dhclient` on h1:
 
@@ -176,7 +176,7 @@ Also, do the same for host h2:
 
 ```console
 h2$ wireshark &
-```console
+```
 
 and then run `dhclient` on h1:
 
