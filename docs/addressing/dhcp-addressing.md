@@ -164,7 +164,7 @@ h1$ wireshark &
 and then run `dhclient` on h1:
 
 ```console
-h1$ dhclient
+h1$ dhclient h1-eth0
 ```
 
 Your wireshark capture should like this:
@@ -172,7 +172,19 @@ Your wireshark capture should like this:
 ![Screenshot](wireshark.png)
 
 
-Repeat the same steps for the host h2.
+Also, do the same for host h2:
+
+```console
+h2$ wireshark &
+```console
+
+and then run `dhclient` on h1:
+
+```console
+h2$ dhclient h2-eth0
+```
+
+
 
 Check captured packets on wireshark and answer the following questions:
 
