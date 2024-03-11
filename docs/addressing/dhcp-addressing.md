@@ -181,3 +181,6 @@ Check captured packets on wireshark and answer the following questions:
 > Q. Are DHCP messages sent over UDP or TCP?
 
 > Q: Which IP address did the host h1 get from the DHCP server, and why?
+
+> Q: Which IP address did the host h2 get from the DHCP server, and why?
+
