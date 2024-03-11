@@ -178,7 +178,7 @@ Also, do the same for host h2:
 h2$ wireshark &
 ```
 
-and then run `dhclient` on h1:
+and then run `dhclient` on h2:
 
 ```console
 h2$ dhclient h2-eth0
