@@ -133,7 +133,7 @@ To enable IP forwarding:
 
 ## Part 3: Static routing
 
-You've already figured out that h1 cannot ping h3 because it doesn't know where to send packets destined for h3. We, therefore, have to manually add network routes for h3 in h1 so that it knows where to send the packets when it wants to communicate with h3. And, we repeat the same for h3 so that it can reach h1.
+You've already figured out that h1 cannot ping h2 because it doesn't know where to send packets destined for h2. We, therefore, have to manually add network routes for h2 in h1 so that it knows where to send the packets when it wants to communicate with h2. And, we repeat the same for h2 so that it can reach h1.
 
 The syntax is pretty simple:
 
@@ -156,7 +156,7 @@ type `ip route` or `route -n` to see the routing table on h1 and/or h3:
 
 Now, ping h2 from h1 and h1 from h2.
 
-> Q: What's your result? Can you reach h1 from h3 or h3 from h1?
+> Q: What's your result? Can you reach h1 from h2 or h2 from h1?
 
 
 ## Part 5: Tasks
