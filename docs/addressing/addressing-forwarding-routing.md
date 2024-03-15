@@ -86,7 +86,7 @@ Now assign addresses to r's interfaces:
 
 `r> ip address add 10.0.1.2/24 dev r-eth1`
 
-> **NOTE** r has two interfaces, connecting two subnets (h1-r) and (r-h3)
+> **NOTE** r has two interfaces, connecting two subnets (h1-r) and (r-h2)
 
 
 and do the same for h2:
@@ -110,7 +110,7 @@ Ping r's IP (10.0.0.2) from h1 and r's IP (10.0.1.2) from h2.
 
 > Q. Does it work?
 
-> Q: Can you ping h3 from h1 or vice versa? 
+> Q: Can you ping h2 from h1 or vice versa? 
 
 ## Part 2: IP forwarding
 
@@ -133,7 +133,7 @@ To enable IP forwarding:
 
 ## Part 3: Static routing
 
-You've already figured out that h1 cannot ping h2 because it doesn't know where to send packets destined for h2. We, therefore, have to manually add network routes for h2 in h1 so that it knows where to send the packets when it wants to communicate with h2. And, we repeat the same for h2 so that it can reach h1.
+You've already figured out that h1 cannot ping h2 because it doesn't know where to send packets destined for h2. We, therefore, have to manually add network routes for h2 on h1 so that it knows where to send the packets when it wants to communicate with h2. And, we repeat the same for h2 so that it can reach h1.
 
 The syntax is pretty simple:
 
@@ -143,11 +143,11 @@ so, type the following on h1:
 
 `h1>  ip route add 10.0.1.0/24 via 10.0.0.2 dev h1-eth0`
 
-and on h3:
+and on h2:
 
 `h2>  ip route add 10.0.0.0/24 via 10.0.1.2 dev h2-eth0`
 
-type `ip route` or `route -n` to see the routing table on h1 and/or h3:
+type `ip route` or `route -n` to see the routing table on h1 and/or h2:
 
 
 > **NOTE** static routing is *not* useful when you have a large network. It's not feasible for the network administrators to manually configure routes. 
