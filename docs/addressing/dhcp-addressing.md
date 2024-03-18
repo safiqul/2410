@@ -118,7 +118,7 @@ r$ sysctl net.ipv4.ip_forward=1
 
 ### Configure DHCP configuration files for addresses
 
-Add the following lines in your `dhcpd.conf` file to specify the range for the IP addresses to be allocated for the hosts in different subnets.
+Add the following lines in your `/etc/dhcp/dhcpd.conf` file to specify the range for the IP addresses to be allocated for the hosts in different subnets.
 
 ```sh
 subnet 192.168.1.0 netmask 255.255.255.0 {
@@ -143,6 +143,11 @@ Start DHCP server on r:
 r$ service isc-dhcp-server restart & dhcpd -f -4 -cf /etc/dhcp/dhcpd.conf &
 ```
 
+> NOTE: If you encounter any issues with accessing the *DHCP lease file*, simply run the following command on the router (r):
+
+```console 
+r$ chmod 077 /var/lib/dhcp/dhcpd.leases
+```
 
 ## Part 4: Run DHCP client on Hosts
 
