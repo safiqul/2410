@@ -235,7 +235,7 @@ Check the routing tables for R2 and R3 for R entries.
 
 # Part 6: Simulating network failure
 
-Disconnect the link between R1 and R3:
+Disconnect the link between R1 and R3: click the "Del" button (refer to the screenshot) and then select the link between R1 and R3 to delete it.
 
 ![del](del.png)
 
