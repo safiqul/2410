@@ -31,7 +31,7 @@ Alternatively, you can download from this [page](https://www.computernetworkingn
 
 ## Part 2: Load the topology
 
-We're going to use the following topology for our lab (taken from this [page]()). 
+We're going to use the following topology for our lab (taken from this [page](https://www.computernetworkingnotes.com/ccna-study-guide/ospf-configuration-step-by-step-guide.html)). 
 
 ![A simple network topology](topo.png)
 
