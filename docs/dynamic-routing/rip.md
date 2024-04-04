@@ -239,7 +239,7 @@ Disconnect the link between R1 and R3:
 
 ![del](del.png)
 
-Now, do a tracert again from pc01 to the server:
+Do a tracert again from pc01 to the server:
 
 ```console
 C:\>tracert 50.0.0.2
@@ -255,6 +255,6 @@ Trace complete.
 
 ```
 
-Now, answer the following question: 
+and, answer the following question: 
 
 > Q. Can you explain?
